@@ -59,4 +59,12 @@ class GameTest {
             .extracting(List::size)
             .containsExactly(2,2);
     }
+
+    @Test
+    void givenGameAssignPlayerAnIdAndCheckIt() {
+
+
+        assertThat(game.getCurrentPlayer().id())
+                .isEqualTo(0);
+    }
 }

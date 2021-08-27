@@ -24,10 +24,4 @@ class GameServiceTest {
         assertThat(gameService.currentGame().playerCount())
                 .isEqualTo(2);
     }
-
-    @Test
-    public void twoPlayerGameFirstPlayerDoneWhenNextPlayerSubmitted() throws Exception {
-
-        assertThat()
-    }
 }

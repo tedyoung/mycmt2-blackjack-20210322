@@ -12,14 +12,20 @@ NEXT TASKS:
 
       [X] fix numOfPlayers and numberOfPlayers variables
 
+      [ ] Initial deal: detect "current player", which depends on if any player is dealt Blackjack
+
+          [ ] Requires us to be able to differentiate players, perhaps by adding their names as Strings (and maybe ID, too)
+
+-->           [ ] Query: who is the current player? -> return Player (law of Demeter?)
+
+              [ ] Query: is current player done?
+
+              [ ] Command: move to next player
+
       [ ] When Player is "done", present button saying "Next Player", which makes the next player (if any) the current player
                 command for nextPlayer
 
           [ ] If we're out of players, then the game is over and show final game state for all players
-
-      [ ] Initial deal: detect "current player", which depends on if any player is dealt Blackjack
-
-          [ ] Requires us to be able to differentiate players, perhaps by adding their names as Strings (and maybe ID, too)
 
       [ ] Display only current player's cards (and Dealer's)
 
