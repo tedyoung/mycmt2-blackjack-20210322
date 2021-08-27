@@ -70,6 +70,13 @@ class GameTest {
 
     @Test
     public void givenMultiplePlayersEachPlayerGetsUniqueIdAssigned() throws Exception {
+        Deck noBlackjackDeck = new StubDeck(Rank.QUEEN, Rank.EIGHT,
+                                            Rank.TEN, Rank.FOUR,
+                                            Rank.THREE, Rank.TEN);
+        Game game = new Game(noBlackjackDeck, 2);
 
+        assertThat(game.getPlayers())
+                .extracting(Player::id)
+                .containsExactly(0, 1);
     }
 }
