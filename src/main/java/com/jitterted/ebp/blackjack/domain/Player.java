@@ -7,6 +7,10 @@ public class Player {
     private final Hand playerHand = new Hand();
     private boolean isDone = false;
 
+    public int id() {
+        return 0;
+    }
+
     public void drawFrom(Deck deck) {
         playerHand.drawFrom(deck);
         if (hasBlackjack()) {

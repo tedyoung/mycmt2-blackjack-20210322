@@ -55,16 +55,21 @@ class GameTest {
         game.initialDeal();
 
         assertThat(game.getPlayers())
-            .extracting(Player::cards)
-            .extracting(List::size)
-            .containsExactly(2,2);
+                .extracting(Player::cards)
+                .extracting(List::size)
+                .containsExactly(2, 2);
     }
 
     @Test
     void givenGameAssignPlayerAnIdAndCheckIt() {
-
+        Game game = new Game();
 
         assertThat(game.getCurrentPlayer().id())
                 .isEqualTo(0);
+    }
+
+    @Test
+    public void givenMultiplePlayersEachPlayerGetsUniqueIdAssigned() throws Exception {
+
     }
 }

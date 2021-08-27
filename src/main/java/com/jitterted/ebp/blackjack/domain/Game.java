@@ -1,6 +1,7 @@
 package com.jitterted.ebp.blackjack.domain;
 
 import com.jitterted.ebp.blackjack.domain.port.GameRepository;
+import jdk.jshell.Snippet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -81,6 +82,10 @@ public class Game {
     // Breaks encapsulation!
     public List<Player> getPlayers() {
         return players;
+    }
+
+    public Player getCurrentPlayer() {
+        return currentPlayer;
     }
 
     public void playerHits() {
