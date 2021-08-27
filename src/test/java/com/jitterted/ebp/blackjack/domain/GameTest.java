@@ -62,7 +62,10 @@ class GameTest {
 
     @Test
     void givenGameAssignPlayerAnIdAndCheckIt() {
-        Game game = new Game();
+        Deck noBlackjackDeck = new StubDeck(Rank.QUEEN, Rank.EIGHT,
+                                            Rank.TEN, Rank.FOUR,
+                                            Rank.THREE, Rank.TEN);
+        Game game = new Game(noBlackjackDeck, 1);
 
         assertThat(game.getCurrentPlayer().id())
                 .isEqualTo(0);

@@ -44,7 +44,7 @@ public class Game {
         this.gameRepository = gameRepository;
         players = new ArrayList<>();
         for (int i = 0; i < numberOfPlayers; i++) {
-            players.add(new Player());
+            players.add(new Player(i));
         }
         currentPlayer = players.get(0);
     }

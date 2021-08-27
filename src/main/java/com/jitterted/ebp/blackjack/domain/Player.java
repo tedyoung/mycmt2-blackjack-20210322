@@ -5,10 +5,18 @@ import java.util.List;
 public class Player {
 
     private final Hand playerHand = new Hand();
+    private int id = 0;
     private boolean isDone = false;
 
+    public Player() {
+    }
+
+    public Player(int id) {
+        this.id = id;
+    }
+
     public int id() {
-        return 0;
+        return id;
     }
 
     public void drawFrom(Deck deck) {
