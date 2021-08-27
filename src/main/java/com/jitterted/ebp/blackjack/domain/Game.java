@@ -25,8 +25,8 @@ public class Game {
         });
     }
 
-    public Game(Deck deck, int numOfPlayers) {
-        this(deck, game -> {}, game -> {}, numOfPlayers);
+    public Game(Deck deck, int numberOfPlayers) {
+        this(deck, game -> {}, game -> {}, numberOfPlayers);
     }
 
     public Game(Deck deck, GameMonitor gameMonitor) {
