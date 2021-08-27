@@ -16,6 +16,12 @@ NEXT TASKS:
 
           [ ] Requires us to be able to differentiate players, perhaps by adding their names as Strings (and maybe ID, too)
 
+      [ ] When Player is "done", present button saying "Next Player", which makes the next player (if any) the current player
+
+          [ ] If we're out of players, then the game is over and show final game state for all players
+
+      [ ] Display only current player's cards (and Dealer's)
+
       [X] Refactor single player to be List of just one player, no external behavioral changes
 
       [X] Initial deal to two players
