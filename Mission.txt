@@ -16,7 +16,7 @@ NEXT TASKS:
 
           [ ] Requires us to be able to differentiate players, perhaps by adding their names as Strings (and maybe ID, too)
 
--->           [ ] Query: who is the current player? -> return Player (law of Demeter?)
+              [X] Query: who is the current player? -> return Player (law of Demeter?)
 
               [ ] Query: is current player done?
 

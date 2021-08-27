@@ -82,4 +82,20 @@ class GameTest {
                 .extracting(Player::id)
                 .containsExactly(0, 1);
     }
+
+    @Test
+    public void givenMultiplePlayersWhenPlayerStandsCurrentPlayerIsDone() throws Exception {
+        Deck noBlackjackDeck = new StubDeck(Rank.QUEEN, Rank.EIGHT,
+                                            Rank.TEN, Rank.FOUR,
+                                            Rank.THREE, Rank.TEN);
+        Game game = new Game(noBlackjackDeck, 2);
+        game.initialDeal();
+
+        game.playerStands();
+
+        assertThat(game.getCurrentPlayer().isDone())
+                .isTrue();
+    }
+
+
 }
