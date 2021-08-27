@@ -50,7 +50,6 @@ public class Game {
     }
 
     public void initialDeal() {
-        // How to support 2+ players?
         dealRoundOfCards();
         dealRoundOfCards();
         playerStateChanged();
@@ -86,6 +85,10 @@ public class Game {
 
     public Player getCurrentPlayer() {
         return currentPlayer;
+    }
+
+    public void nextPlayer() {
+        throw new UnsupportedOperationException(); // stopped here
     }
 
     public void playerHits() {

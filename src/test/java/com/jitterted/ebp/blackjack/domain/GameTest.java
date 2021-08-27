@@ -84,18 +84,17 @@ class GameTest {
     }
 
     @Test
-    public void givenMultiplePlayersWhenPlayerStandsCurrentPlayerIsDone() throws Exception {
+    public void givenMultiplePlayersPlayerStandsWhenNextPlayerCommandThenSecondPlayerIsCurrent() throws Exception {
         Deck noBlackjackDeck = new StubDeck(Rank.QUEEN, Rank.EIGHT,
                                             Rank.TEN, Rank.FOUR,
                                             Rank.THREE, Rank.TEN);
         Game game = new Game(noBlackjackDeck, 2);
         game.initialDeal();
-
         game.playerStands();
 
-        assertThat(game.getCurrentPlayer().isDone())
-                .isTrue();
+        game.nextPlayer();
+
+        assertThat(game.getCurrentPlayer().id())
+                .isEqualTo(1);
     }
-
-
 }
